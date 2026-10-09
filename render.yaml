@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: alvesmld-api
+    runtime: python
+    buildCommand: pip install -r requirements-web.txt
+    startCommand: uvicorn api_server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ALVESMLD_CORS_ORIGINS
+        value: "*"
