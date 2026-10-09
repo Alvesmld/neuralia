@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b12"><meta name="description" content="ALVESMLD — laboratório de geração de projetos">
+  <title>ALVESMLD · Studio</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">A</span><span>ALVES<span class="brand-light">MLD</span><small>PROJECT STUDIO · V11</small></span></a>
+      <div class="side-label">WORKSPACE</div><div class="side-item active"><span>✳</span> Novo projeto</div>
+      <div class="side-item muted"><span>▤</span> Projetos recentes <small>nesta sessão</small></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span id="connection-label">Conectando à API…</span><div class="sidebar-note">Motor local por regras e blueprints. Sem APIs de IA externas.</div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">A</span> ALVESMLD</div><div class="top-tag"><span class="status-dot"></span> V11 · WEB STUDIO</div><a class="docs-link" href="https://vercel.com/docs" target="_blank" rel="noreferrer">Deploy ↗</a></header>
+      <section class="hero"><div class="eyebrow"><span class="spark">✳</span> SEU LABORATÓRIO DE SOFTWARE</div><h1>Transforme uma ideia<br><span>em um projeto.</span></h1><p>Descreva o que quer construir. A ALVESMLD monta um projeto inicial e prepara os arquivos para baixar.</p></section>
+      <section class="composer-card">
+        <label for="description">O que vamos construir hoje?</label>
+        <textarea id="description" maxlength="3000" placeholder="Ex.: Crie uma calculadora em Python com soma, subtração, multiplicação, divisão e testes automatizados…"></textarea>
+        <div class="composer-footer"><span id="char-count">0 / 3000</span><button id="generate-btn" type="button"><span>Gerar projeto</span><span class="arrow">↗</span></button></div>
+        <div class="suggestions"><span>Experimente:</span><button type="button" class="chip" data-prompt="Crie uma calculadora em Python com soma, subtração, multiplicação, divisão e testes automatizados">Calculadora Python</button><button type="button" class="chip" data-prompt="Crie um jogo RPG de texto em Python com personagem, vida, ataque e combate por turnos">RPG de texto</button><button type="button" class="chip" data-prompt="Crie uma lista de tarefas em Python com adicionar, listar e remover tarefas">Lista de tarefas</button></div>
+      </section>
+      <div id="message" class="message hidden" role="status" aria-live="polite"></div>
+      <section id="result" class="result-card hidden" aria-live="polite">
+        <div class="result-head"><div><div class="result-kicker">PROJETO PREPARADO</div><h2 id="result-name">Seu projeto</h2></div><span id="blueprint-pill" class="pill">Python</span></div>
+        <div class="stats"><div><span>ARQUIVOS</span><strong id="file-count">—</strong></div><div><span>REQUISITOS PENDENTES</span><strong id="pending-count">—</strong></div><div><span>TESTES</span><strong id="test-status">Não executados</strong></div></div>
+        <h3>Arquivos incluídos</h3><ul id="file-list" class="file-list"></ul>
+        <p id="warning" class="warning"></p><a id="download-btn" class="download-btn" href="#"><span>↓</span> Baixar projeto (.zip)</a>
+      </section>
+      <footer><span>ALVESMLD V11</span><span>Feito para evoluir, passo a passo.</span></footer>
+    </main>
+  </div>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
