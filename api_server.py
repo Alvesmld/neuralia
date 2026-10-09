@@ -11,7 +11,7 @@ from gerar_projeto_v10 import gerar_v10
 from gerar_projeto_natural import slug
 
 ROOT = Path(__file__).resolve().parent
-OUT = (ROOT / "projetos_web").resolve()
+OUT = Path("/tmp/projetos_web")
 OUT.mkdir(parents=True, exist_ok=True)
 app = FastAPI(title="ALVESMLD API", version="11.0.0", description="Interface web para o motor local da ALVESMLD.")
 origins = [x.strip() for x in os.getenv("ALVESMLD_CORS_ORIGINS", "*").split(",") if x.strip()]
